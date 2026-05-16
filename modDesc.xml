@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<modDesc descVersion="107">
+    <author>SimuTools</author>
+    <version>1.0.0.0</version>
+
+    <title>
+        <en>3DInspector</en>
+    </title>
+
+    <description>
+       <de><![CDATA[Dieser Inspector zeigt Statusinformationen direkt in der Spielwelt an. Dazu gehören unter anderem Füllstände, Fahrzeuginformationen, Produktionsdaten und Tierinformationen. Die Anzeige kann durch Gedrückthalten der ALT-Taste eingeblendet werden.]]></de>
+       <en><![CDATA[This inspector displays status information directly in the game world. This includes fill levels, vehicle information, production data, and animal information. The display can be shown by holding down the ALT key.]]></en>
+    </description>
+
+    <iconFilename>icon_3DInspector.dds</iconFilename>
+    <multiplayer supported="true"/>
+
+    <extraSourceFiles>
+        <sourceFile filename="scripts/main.lua"/>
+        <sourceFile filename="scripts/placeableInfo.lua"/>
+    </extraSourceFiles>
+
+    <actions>
+        <action name="INSPECTOR_3D_SHOW" category="VEHICLE" axisType="HALF"/>
+    </actions>
+
+    <inputBinding>
+        <actionBinding action="INSPECTOR_3D_SHOW">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lalt"/>
+        </actionBinding>
+    </inputBinding>
+
+    <l10n>
+        <text name="input_INSPECTOR_3D_SHOW">
+            <en>Show 3D inspector</en>
+            <de>3D-Inspector anzeigen</de>
+        </text>
+        <text name="inspector3d_unknown">
+            <en>Unknown</en>
+            <de>Unbekannt</de>
+        </text>
+        <text name="inspector3d_vehicle_fallback">
+            <en>Vehicle</en>
+            <de>Fahrzeug</de>
+        </text>
+        <text name="inspector3d_placeable_fallback">
+            <en>Placeable</en>
+            <de>Objekt</de>
+        </text>
+        <text name="inspector3d_fill_fallback">
+            <en>Fill</en>
+            <de>Füllstand</de>
+        </text>
+        <text name="inspector3d_food_fallback">
+            <en>Food</en>
+            <de>Futter</de>
+        </text>
+        <text name="inspector3d_speed_unit">
+            <en>mph</en>
+            <de>km/h</de>
+        </text>
+    </l10n>
+</modDesc>
